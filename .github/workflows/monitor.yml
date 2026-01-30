@@ -1,5 +1,7 @@
 name: Monitor Mercor Jobs
-
+concurrency:
+  group: mercor-job-monitor
+  cancel-in-progress: true
 on:
   schedule:
     - cron: "*/30 * * * *"
