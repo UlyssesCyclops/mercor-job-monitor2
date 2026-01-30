@@ -65,7 +65,7 @@ def scrape_jobs():
             page.goto("https://work.mercor.com/explore", wait_until="networkidle", timeout=30000)
             
             # Wait for job listings to load
-            page.wait_for_selector('a[href*="/jobs/list_"]', timeout=10000)
+            page.wait_for_selector('a[href*="/jobs/list_"]', timeout=60000)
             
             # Extract job information
             job_elements = page.query_selector_all('a[href*="/jobs/list_"]')
